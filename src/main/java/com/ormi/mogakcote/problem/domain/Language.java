@@ -19,9 +19,9 @@ public class Language {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String languageName;
+    private String name;
 
-    public void update(String languageName) {
-        this.languageName = languageName;
+    public void update(String name) {
+        this.name = name;
     }
 }

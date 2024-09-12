@@ -38,15 +38,8 @@
 - 배포 환경 : AWS EC2, RDS, Docker
 - 협업도구 : GitHub, Notion, Figma, ERDCloud, Discord
 
-## 2. 🏭System Structure
-![MogakCote Architecture](https://github.com/user-attachments/assets/4aeaff3c-9116-402a-8a06-28936d15d3f8)
 
-## 3. 🔐ERD Structure
-<img width="1574" alt="erd" src="https://github.com/user-attachments/assets/758ca007-b022-409e-9f6b-7b9481056eb4">
-
-
-
-## 4. **기능 명세서**
+## 2. **기능 명세서**
 - 게시글   
 ![게시글 상세 페이지](https://github.com/user-attachments/assets/3118755d-44ed-4089-8709-7fadd483a3f8)
 ![게시글 수정 페이지](https://github.com/user-attachments/assets/81996060-3d0e-4cc3-bb6a-6c72b5683fbc)
@@ -81,7 +74,7 @@
 - 회원 관리 페이지   
 ![회원관리](https://github.com/user-attachments/assets/4277c9b8-8f61-49f8-9044-c6836e4003da)
 
-## 5. ✨UI(화면) 설계서 
+## 3. ✨UI(화면) 설계서 
 - [피그마 링크 바로가기](https://www.figma.com/design/yqi7pKRtBkjGSY0kwr7ijQ/Untitled?node-id=0-1&node-type=canvas&t=WbekpxmRE9Ay8diQ-0)
 
 |                                                                                                                       |                                                                                                                   |
@@ -103,56 +96,89 @@
 | 관리자 페지                                                                                         | 마이페이지 수정                                                                                       |
 | ![관리자 페이지](https://github.com/user-attachments/assets/4922eabb-a00c-4ab9-81fa-858d2fb67d4b)  |  ![마이페이지 수정](https://github.com/user-attachments/assets/d7452251-243c-436e-b260-41fac4409929) |
 
-## 6. 📖개발일정   
-![개발일정](https://github.com/user-attachments/assets/46a70cab-e0e3-496d-85d0-298ec18fd7bd)
+## 4. 📖개발일정   
+![개발일정 최신](https://github.com/user-attachments/assets/c8f776ce-834d-475f-8a0c-f3f9c4971115)
 
 ### 🌐 Front-End
 ```
 📁 src
 └── 📁 main/resources
-     ├── 📁 static
-     |     ├── 📁 css
-     |     |    ├── 📃 admin.css
-     |     |    ├── 📃 home.css
-     |     |    ├── 📃 login.css
-     |     |    ├── 📃 logo.png
-     |     |    ├── 📃 noticeStyle.css
-     |     |    ├── 📃 searchIcon.css
-     |     |    └── 📃 style.css
-     |     ├── 📁 img
-     |     |    └── 📃 mouse.png
-     |     └── 📁 js
-     |          ├── 📃 admin.js
-     |          ├── 📃 home.js
-     |          ├── 📃 login.js
-     |          └── 📃 script.js
-     └── 📁 templates
-           ├── 📁 comment
-           |    ├── 📁 css
-           |    |    └── 📃 comment.css
-           |    └── 📁 html
-           |    |    └── 📃 comment.html
-           ├── 📁 search
-           |    ├── 📁 css
-           |    |    └── 📃 search.css
-           |    ├── 📁 html
-           |    |    └── 📃 search.html
-           |    ├── 📁 img
-           |    |    ├── 📃 food.png
-           |    |    ├── 📃 mouse.png
-           |    |    └── 📃 searchIcon-black.png
-           |    └── 📁 script
-           |         └── 📃 search.js
-           ├── 📃 admin.html
-           ├── 📃 editNotice.html
-           ├── 📃 editPost.html
-           ├── 📃 find.html
-           ├── 📃 home.html
-           ├── 📃 login.html
-           ├── 📃 noticeDetail.html
-           ├── 📃 postDetail.html
-           ├── 📃 writeNotice.html
-           └── 📃 writePost.html
+    ├── 📁 config
+    |   ├── 📃 application.yml
+    |   ├── 📃 application-dev.yml
+    |   ├── 📃 application-prod.yml
+    |   └── 📃 application-unitest.yml
+    ├── 📁 static
+    |   ├── 📁 css
+    |   |   ├── 📁 post
+    |   |   |   └── 📃 list.css
+    |   |   ├── 📃 auth.css
+    |   |   ├── 📃 header.css
+    |   |   ├── 📃 news-modal.css
+    |   |   └── 📃 post.css
+    |   ├── 📁 html
+    |   |   ├── 📁 admin
+    |   |   |   └── 📃 adminPage.html
+    |   |   ├── 📁 auth
+    |   |   |   ├── 📃 findEmail.html
+    |   |   |   ├── 📃 findPassword.html
+    |   |   |   ├── 📃 login.html
+    |   |   |   └── 📃 signup.html
+    |   |   ├── 📁 header
+    |   |   |   └── 📃 header.html
+    |   |   ├── 📁 post
+    |   |   |   ├── 📃 comment.html
+    |   |   |   ├── 📃 post-create.html
+    |   |   |   ├── 📃 post-detail.html
+    |   |   |   ├── 📃 post-info.html
+    |   |   |   ├── 📃 post-modify.html
+    |   |   |   └── 📃 system-comment.html
+    |   |   └── 📁 profile
+    |   |       └── 📃 profile.html
+    |   ├── 📁 img
+    |   |   ├── 📁 bell
+    |   |   |   ├── 📃 bell-white.png
+    |   |   |   └── 📃 bell-yellow.png
+    |   |   ├── 📃 page-arrow-active.svg
+    |   |   ├── 📃 page-arrow-disabled.svg
+    |   |   └── 📃 select-arrow.svg
+    |   └── 📁 js
+    |       ├── 📁 auth
+    |       |   ├── 📃 apiConfig.js
+    |       |   ├── 📃 error.js
+    |       |   ├── 📃 findEmail.js
+    |       |   ├── 📃 findPassword.js
+    |       |   ├── 📃 init.js
+    |       |   ├── 📃 jwt.js
+    |       |   ├── 📃 login.js
+    |       |   └── 📃 logout.js
+    |       ├── 📁 comment
+    |       |   ├── 📃 comment.js
+    |       |   └── 📃 system-comment.js
+    |       ├── 📃 header.js
+    |       ├── 📃 news-modal.js
+    |       ├── 📃 post-detail.js
+    |       └── 📃 post-info.js
+    └── 📁 templates
+        ├── 📁 adnmin
+        |   ├── 📃 adminPage.html
+        |   └── 📃 adminPageHtml.html
+        ├── 📁 notice
+        |   ├── 📃 cretate.html
+        |   ├── 📃 detail.html
+        |   └── 📃 edit.html
+        ├── 📁 post-info
+        |   ├── 📃 comment.html
+        |   ├── 📃 post-detail.html
+        |   ├── 📃 post.html
+        |   └── 📃 system-comment.html
+        ├── 📁 post
+        |   ├── 📃 list.html
+        |   ├── 📃 post-create.html
+        |   ├── 📃 post-detail.html
+        |   └── 📃 post-modify.html
+        └── 📃 error.html
+
 
 ```
 ### ⚙️ Back-End
@@ -444,6 +470,11 @@
 
 ```
 
+## 🏭System Architecture
+![MogakCote Architecture](https://github.com/user-attachments/assets/4aeaff3c-9116-402a-8a06-28936d15d3f8)
+
+## 🔐ERD Structure
+<img width="1398" alt="erd최신" src="https://github.com/user-attachments/assets/487a2711-048a-4832-8dab-9491382c48c9">
 
 ## 🎈API 명세서
 
@@ -589,4 +620,5 @@
 - 김민주
 - 유석호
 - 이재준
+
 
